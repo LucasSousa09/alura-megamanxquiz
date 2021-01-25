@@ -35,9 +35,9 @@ const FooterWrapper = styled.footer`
                 </a>
                 <p>
                     Orgulhosamente criado durante
-                    {''}
-                    a
-                    {''}
+                    {''} &nbsp;
+                       a
+                    {''} &nbsp;
                     <a href="https://www.alura.com.br">
                         <span>Imersão React da Alura</span>
                     </a>

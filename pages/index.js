@@ -4,24 +4,13 @@ import Widget from '../src/components/Widget/'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer/'
-
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
-
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-// `
+import OtherQuizes from '../src/components/OtherQuizes'
+import LogoContainer from '../src/components/Logo/'
+import Image from 'next/image'
 
 const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
-  padding-top: 45px;
   margin: auto 10%;
   @media screen and(max-width: 500px){
     margin: auto;
@@ -31,16 +20,21 @@ const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={'/megaman.jpg'}>
+        <LogoContainer>
+          <img src="/logoalura.png"></img>
+        </LogoContainer>
         <QuizContainer>
           <Widget>
             <Widget.Header>
-              <h1> CSS IS Awesome</h1>
+              <h1>{db.title}</h1>
             </Widget.Header>
             <Widget.Content>
-            <p>
-              lorem ipsun dnnof aodinf sns...
-            </p>
+              <p>
+                {db.description}
+              </p>
+              <input type="text" placeholder="Digite seu nome, nobre guerreiro(a)!"></input>
+              <button>Game Start!</button>
             </Widget.Content>
           </Widget>
 
@@ -48,11 +42,20 @@ export default function Home() {
             <Widget.Content>
               <h1> Quizes da Galera!</h1>
               <p>
-                lorem ipsun dnnof aodinf sns...
+                Não esqueça de visitar esse Quizes incríveis que a galera da Imersão React criou!!!
               </p>
+              <OtherQuizes>
+                <a href="#">paulosouza/jsmortalquiz</a>
+              </OtherQuizes>
+              <OtherQuizes>
+                <a href="#">juliana/cssmatadorquiz</a>
+              </OtherQuizes>
+              <OtherQuizes>
+                <a href="#">soutinho/thelegendofzeldaquiz</a>
+              </OtherQuizes>
             </Widget.Content>
           </Widget>
-          <Footer></Footer>
+          <Footer />
         </QuizContainer>
         <GitHubCorner />     
     </QuizBackground>  

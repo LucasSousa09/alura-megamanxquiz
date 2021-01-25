@@ -17,7 +17,44 @@ const Widget = styled.div`
   p{
     font-size: 14px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.4;
+  }
+
+  input{
+    width: 100%;
+    background-color: transparent;
+    color: ${({theme}) => theme.colors.contrastText};
+
+    border: 1px solid ${({theme}) => theme.colors.gray};
+    border-radius: ${({theme}) => theme.borderRadius};
+
+    font-family: inherit;
+
+    padding: .5rem 0 .5rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  button{
+    width: 100%;
+    padding: .5rem;
+
+    font-family: inherit;
+    background-color: ${({theme}) => theme.colors.primary};
+
+    border: none;
+    border-radius: ${({theme}) => theme.borderRadius};
+
+    color: ${({theme}) => theme.colors.contrastText};
+    cursor: pointer;
+
+    &:active{
+      transform: scale(0.98);
+    }
+
+    &:hover,
+    &:focus{
+      background-color: ${({theme}) => theme.colors.terciary};
+    }
   }
 `
 
