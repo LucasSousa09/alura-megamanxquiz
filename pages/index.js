@@ -3,30 +3,18 @@ import db from '../db.json'
 import Widget from '../src/components/Widget/'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import QuizContainer from '../src/components/QuizContainer'
 import Footer from '../src/components/Footer/'
-import OtherQuizes from '../src/components/OtherQuizes'
-import LogoContainer from '../src/components/Logo/'
+import OptionsContainer from '../src/components/OptionsContainer'
+import Logo from '../src/components/Logo/'
 import Meta from '../src/components/Head/'
-import Image from 'next/image'
-
-const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  margin: auto 10%;
-  @media screen and(max-width: 500px){
-    margin: auto;
-    padding: 15px;
-  }
-`
 
 export default function Home() {
   return (
     <QuizBackground backgroundImage={'/megaman.jpg'}>
         <Meta />
-        <LogoContainer>
-          <img src="/logoalura.png"></img>
-        </LogoContainer>
         <QuizContainer>
+          <Logo />
           <Widget>
             <Widget.Header>
               <h1>{db.title}</h1>
@@ -46,15 +34,15 @@ export default function Home() {
               <p>
                 Não esqueça de visitar esse Quizes incríveis que a galera da Imersão React criou!!!
               </p>
-              <OtherQuizes>
+              <OptionsContainer>
                 <a href="#">paulosouza/jsmortalquiz</a>
-              </OtherQuizes>
-              <OtherQuizes>
+              </OptionsContainer>
+              <OptionsContainer>
                 <a href="#">juliana/cssmatadorquiz</a>
-              </OtherQuizes>
-              <OtherQuizes>
+              </OptionsContainer>
+              <OptionsContainer>
                 <a href="#">soutinho/thelegendofzeldaquiz</a>
-              </OtherQuizes>
+              </OptionsContainer>
             </Widget.Content>
           </Widget>
           <Footer />

@@ -10,6 +10,10 @@ const QuizBackground = styled.div`
     background-color: ${({theme}) => theme.colors.mainBg};
 
     @media screen and (max-width: 500px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         background-image: none;
 
         &:after{

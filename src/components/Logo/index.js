@@ -5,11 +5,16 @@ const LogoContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    margin: auto 10%;
     margin-top: 1.5rem;
 
     width: 100%;
     max-width: 350px;
 `
 
-export default LogoContainer;
+export default function Logo(){
+    return (
+        <LogoContainer>
+            <img src="/logoalura.png"></img>
+        </LogoContainer>
+    )
+}

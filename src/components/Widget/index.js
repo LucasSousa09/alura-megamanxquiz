@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const Widget = styled.div`
+  position: relative;
+  z-index: 999;
   margin: 24px 0;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: #1C1814;
@@ -15,6 +17,7 @@ const Widget = styled.div`
   }
 
   p{
+
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
@@ -56,7 +59,31 @@ const Widget = styled.div`
       background-color: ${({theme}) => theme.colors.terciary};
     }
   }
+
+  .chevron-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    &:hover,
+    &:focus{
+      background-color: rgba(255,255,255,0.2);
+    }
+  }
+  .confirmation-button{
+    text-transform: uppercase;
+    font-weight: 700;
+
+    margin-top: .5rem;
+  }
 `
+
 
 Widget.Header = styled.header`
   display: flex;
@@ -69,21 +96,23 @@ Widget.Header = styled.header`
   *{
     margin: 0;
   }
-
 `
 
-Widget.Content = styled.div`
+Widget.Content = styled.div`  
   padding: 24px 32px 32px 32px;
+
   & > *:first-child{
     margin-top:0;
   }
-  & > *last-child{
+  & > *:last-child{
     margin-bottom: 0;
   }
+  
   ul{
     list-style: none;
     padding: 0;
   }
 `
+
 
 export default Widget
