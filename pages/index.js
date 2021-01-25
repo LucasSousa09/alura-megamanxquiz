@@ -6,6 +6,7 @@ import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer/'
 import OtherQuizes from '../src/components/OtherQuizes'
 import LogoContainer from '../src/components/Logo/'
+import Meta from '../src/components/Head/'
 import Image from 'next/image'
 
 const QuizContainer = styled.div`
@@ -21,6 +22,7 @@ const QuizContainer = styled.div`
 export default function Home() {
   return (
     <QuizBackground backgroundImage={'/megaman.jpg'}>
+        <Meta />
         <LogoContainer>
           <img src="/logoalura.png"></img>
         </LogoContainer>
