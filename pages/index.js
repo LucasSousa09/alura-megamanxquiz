@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { useRouter } from 'next/router'
 import db from '../db.json'
 import Widget from '../src/components/Widget/'
 import GitHubCorner from '../src/components/GitHubCorner'
@@ -7,12 +7,14 @@ import QuizContainer from '../src/components/QuizContainer'
 import Footer from '../src/components/Footer/'
 import OptionsContainer from '../src/components/OptionsContainer'
 import Logo from '../src/components/Logo/'
-import Meta from '../src/components/Head/'
+
 
 export default function Home() {
+  const router = useRouter()
+  const [name, setName] = React.useState('')
+
   return (
     <QuizBackground backgroundImage={'/megaman.jpg'}>
-        <Meta />
         <QuizContainer>
           <Logo />
           <Widget>
@@ -23,8 +25,15 @@ export default function Home() {
               <p>
                 {db.description}
               </p>
-              <input type="text" placeholder="Digite seu nome, nobre guerreiro(a)!"></input>
-              <button>Game Start!</button>
+              <form onSubmit={(evt) => {
+                evt.preventDefault()
+                router.push(`/quiz?name=${name}`)
+              }}>
+                <input type="text" placeholder="Digite seu nome, nobre guerreiro(a)!" onChange={(evtInfo) => {
+                  setName(evtInfo.target.value)
+                }}></input>
+                <button type="submit" disabled={name.length === 0}>Game Start!</button>
+              </form>
             </Widget.Content>
           </Widget>
 

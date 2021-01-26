@@ -58,6 +58,10 @@ const Widget = styled.div`
     &:focus{
       background-color: ${({theme}) => theme.colors.terciary};
     }
+    &:disabled{
+      background-color: #ccc;
+      cursor: not-allowed
+    }
   }
 
   .chevron-left{

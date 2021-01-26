@@ -5,6 +5,7 @@ import Logo from '../src/components/Logo/'
 import Widget from '../src/components/Widget'
 import db from '../db.json'
 
+
 export default function Quiz(){
     return(
         <QuizBackground backgroundImage={'/megaman.jpg'}>
@@ -12,7 +13,7 @@ export default function Quiz(){
             <Logo />
             <Widget>
                 <Widget.Header>
-                    <button className="chevron-left"> <img src="/chevron_left_24px.png"/> </button>
+                    <button className=" chevron-left"><img src="/chevron_left_24px.png"/> </button>
                     <h2>Pergunta 1 de {db.questions.length}</h2>
                 </Widget.Header>
                 <Widget.Content>
