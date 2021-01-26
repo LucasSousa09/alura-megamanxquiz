@@ -25,7 +25,45 @@
            "Doutor W",
            "Doutor Robotnik"
         ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Em Megaman X2, qual é o estágio em que está o capacete da armadura?",
+        "description": "Começando a dificultar",
+        "answer": 3,
+        "alternatives": [
+           "Morph Moth",
+           "Wheel Gator",
+           "Overdrive Ostrich",
+           "Crystal Snail"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Em Megaman X3, qual é a força(Power) do Byte?",
+        "description": "Será que você sabe?",
+        "answer": 2,
+        "alternatives": [
+           "8200rp",
+           "17400rp",
+           "18800rp",
+           "22900rp"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Em Megaman X4, qual é a ultima fala do Sigma?",
+        "description": "Só é difícil pra quem não é fã...",
+        "answer": 2,
+        "alternatives": [
+           "Impossible! How... could you... You couldn't... Destroy... the old...world... new age... Hrrgh!",
+           "You have won a temporary victory, X! I will see you soon, X. Very soon...",
+           "Ha ha ha ha ha ha! Goodbye, X!",
+           "Bha ha ha ha ha! I'll come back to fight you again! I will! I... will... Wooooaaaaaaa!"
+        ]
       }
+
+
     ],
     "external": [
       ""

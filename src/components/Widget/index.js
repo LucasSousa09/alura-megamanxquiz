@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const Widget = styled.div`
   position: relative;
+
   z-index: 999;
   margin: 24px 0;
   border: 1px solid ${({ theme }) => theme.colors.primary};
@@ -68,6 +69,8 @@ const Widget = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 0;
     
     width: 40px;
     height: 40px;
@@ -81,11 +84,33 @@ const Widget = styled.div`
     }
   }
   .confirmation-button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
     text-transform: uppercase;
     font-weight: 700;
 
     margin-top: .5rem;
   }
+
+  .confirmation-button.correct,
+  .confirmation-button.wrong{
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    border: none;
+
+    padding: 0;
+
+    background-color: #fff;
+  }
+
+  .confirmation-button.wrong{
+    background-color: transparent;
+  }  
+
 `
 
 
@@ -103,7 +128,16 @@ Widget.Header = styled.header`
 `
 
 Widget.Content = styled.div`  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   padding: 24px 32px 32px 32px;
+
+  *{
+   width: 100%; 
+  }
 
   & > *:first-child{
     margin-top:0;
@@ -118,5 +152,35 @@ Widget.Content = styled.div`
   }
 `
 
+Widget.Animation = styled.div`
+  position: relative;
+  width: 100%;
+  height: 10px;
+
+  background-color: transparent;
+
+  .animation{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+  
+    height: 10px;
+
+
+    background-color: ${({theme}) => theme.colors.secondary};
+
+    animation: load 2s linear;
+  }
+
+  @keyframes load{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%
+    }
+  }
+`
 
 export default Widget
