@@ -8,6 +8,7 @@ import Widget from '../../components/Widget';
 // import db from '../../../db.json';
 import Button from '../../components/Button';
 import LoadingWidget from '../../components/LoadingWidget';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 const screenStates = {
   QUIZ: 'QUIZ',
@@ -124,7 +125,7 @@ export default function Quiz({ externalQuestions, externalTheme, externalBg }) {
     return (
       <div>
         <Widget.Header>
-          <Button.ChevronLeft disabled={false}><img src="/chevron_left_24px.png" alt="chevron-left" /></Button.ChevronLeft>
+          <BackLinkArrow href="/" />
           <h2>
             { `Pergunta ${qN + 1} de ${externalQuestions.length}` }
           </h2>

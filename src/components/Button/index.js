@@ -24,65 +24,39 @@ const Button = styled.button`
 
     &:hover,
     &:focus{
-      background-color: ${({ theme }) => theme.colors.terciary};
+      background-color: ${({ theme }) => theme.colors.secondary};
     }
     &:disabled{
       background-color: #ccc;
       cursor: not-allowed
     }
   }
-  /* .confirmation-button{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-
-    text-transform: uppercase;
-    font-weight: 700;
-
-    margin-top: .5rem;
-  }
-
-  .confirmation-button.correct,
-  .confirmation-button.wrong{
-    width: 48px;
-    height: 48px;
-
-    border-radius: 50%;
-    border: none;
-
-    padding: 0;
-
-    background-color: #fff;
-  }
-
-  .confirmation-button.wrong{
-    background-color: transparent;
-  } */
 `;
 
-Button.ChevronLeft = styled.button`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+// Button.ChevronLeft = styled.a`
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
 
-    background-color: transparent;
+//     background-color: transparent;
 
-    margin: 0;
-    
-    width: 40px;
-    height: 40px;
-    margin-right: 8px;
+//     margin: 0;
 
-    border-radius: 50%;
-    border: none;
+//     width: 40px;
+//     height: 40px;
+//     margin-right: 8px;
 
-    &:hover,
-    &:focus{
-      background-color: rgba(255,255,255,0.2);
-      outline: none;
-    }    
+//     border-radius: 50%;
+//     border: none;
 
-    cursor: pointer;
-`;
+//     &:hover,
+//     &:focus{
+//       background-color: rgba(255,255,255,0.2);
+//       outline: none;
+//     }
+
+//     cursor: pointer;
+//     transition: .3s;
+// `;
 
 export default Button;

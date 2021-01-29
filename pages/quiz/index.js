@@ -73,7 +73,7 @@ export default function Quiz() {
       setQN(qN + 1);
       alternatives.forEach(
         // eslint-disable-next-line no-param-reassign
-        (alternative) => { alternative.style.backgroundColor = db.theme.colors.secondaryBg; },
+        (alternative) => { alternative.style.backgroundColor = db.theme.colors.mainBg; },
       );
     }
 
@@ -111,19 +111,18 @@ export default function Quiz() {
     const alternatives = document.querySelectorAll('.alternatives');
     alternatives.forEach(
       // eslint-disable-next-line no-param-reassign
-      (alternative) => { alternative.style.backgroundColor = db.theme.colors.secondaryBg; },
+      (alternative) => { alternative.style.backgroundColor = db.theme.colors.mainBg; },
     );
 
     setMyAnswer(evt.target.id);
     // eslint-disable-next-line no-param-reassign
-    evt.target.style.backgroundColor = db.theme.colors.terciary;
+    evt.target.style.backgroundColor = db.theme.colors.secondary;
   }
 
   function QuizWidget() {
     return (
       <div>
         <Widget.Header>
-          <Button.ChevronLeft disabled={false}><img src="/chevron_left_24px.png" alt="chevron-left" /></Button.ChevronLeft>
           <h2>
             { `Pergunta ${qN + 1} de ${db.questions.length}` }
           </h2>

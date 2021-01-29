@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import GitHubCorner from '../src/components/GitHubCorner';
@@ -10,6 +11,7 @@ import OptionsContainer from '../src/components/OptionsContainer';
 import Logo from '../src/components/Logo';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
+import Link from '../src/components/Link';
 
 export default function Home() {
   const router = useRouter();
@@ -19,7 +21,16 @@ export default function Home() {
     <QuizBackground backgroundImage="/megaman.jpg">
       <QuizContainer>
         <Logo />
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '101%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
@@ -51,7 +62,16 @@ export default function Home() {
           </Widget.Content>
         </Widget>
 
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '101%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Content>
             <h1> Quizes da Galera!</h1>
             <p>
@@ -68,11 +88,14 @@ export default function Home() {
                   <li key={linkExterno}>
                     <OptionsContainer>
                       {' '}
-                      <a href={`/quiz/${projectName}___${gitHubUser}`}>
+                      <Widget.Topic
+                        href={`/quiz/${projectName}___${gitHubUser}`}
+                        as={Link}
+                      >
                         {projectName}
                         /
                         {gitHubUser}
-                      </a>
+                      </Widget.Topic>
                     </OptionsContainer>
                   </li>
                 );
@@ -80,7 +103,16 @@ export default function Home() {
             </ul>
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer
+          as={motion.section}
+          transition={{ delay: 1, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '101%' },
+          }}
+          initial="hidden"
+          animate="show"
+        />
       </QuizContainer>
       <GitHubCorner />
     </QuizBackground>

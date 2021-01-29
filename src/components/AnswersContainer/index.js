@@ -13,7 +13,7 @@ const AnswersContainer = styled.div`
     cursor: pointer;
 
     &:hover{
-        background-color: ${({ theme }) => theme.colors.terciaryBg}
+        background-color: ${({ theme }) => theme.colors.primary}
     }
 `;
 

@@ -30,8 +30,6 @@ export async function getServerSideProps(context) {
       console.log(err);
     });
 
-  console.log(dbExterno);
-
   return {
     props: {
       dbExterno,

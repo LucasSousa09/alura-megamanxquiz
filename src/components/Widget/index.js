@@ -95,4 +95,9 @@ Widget.Animation = styled.div`
   }
 `;
 
+Widget.Topic = styled.a`
+  text-decoration:none;
+  color: ${({ theme }) => theme.colors.contrastText}
+`;
+
 export default Widget;
