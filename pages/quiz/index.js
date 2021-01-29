@@ -1,12 +1,12 @@
 import React from 'react';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import AnswersContainer from '../src/components/AnswersContainer';
-import Logo from '../src/components/Logo';
-import Widget from '../src/components/Widget';
-import db from '../db.json';
-import Button from '../src/components/Button';
-import LoadingWidget from '../src/components/LoadingWidget';
+import QuizBackground from '../../src/components/QuizBackground';
+import QuizContainer from '../../src/components/QuizContainer';
+import AnswersContainer from '../../src/components/AnswersContainer';
+import Logo from '../../src/components/Logo';
+import Widget from '../../src/components/Widget';
+import db from '../../db.json';
+import Button from '../../src/components/Button';
+import LoadingWidget from '../../src/components/LoadingWidget';
 
 const screenStates = {
   QUIZ: 'QUIZ',

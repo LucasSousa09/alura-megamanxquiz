@@ -6,9 +6,9 @@ const AnswersContainer = styled.div`
     margin-top: .5rem;
     margin-bottom: .5rem;
 
-    border: 1px solid ${({ theme }) => theme.colors.gray};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
     border-radius: ${({ theme }) => theme.borderRadius};
-    background-color: ${({ theme }) => theme.colors.secondaryBg};
+    background-color: ${({ theme }) => theme.colors.mainBg};
 
     cursor: pointer;
 

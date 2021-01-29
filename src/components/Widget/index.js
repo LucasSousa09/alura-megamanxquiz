@@ -6,7 +6,7 @@ const Widget = styled.div`
   z-index: 999;
   margin: 24px 0;
   border: 1px solid ${({ theme }) => theme.colors.primary};
-  background-color: #1C1814;
+  background-color: ${({ theme }) => theme.colors.mainBg};
   border-radius: 4px;
   overflow: hidden;  
 
@@ -60,6 +60,7 @@ Widget.Content = styled.div`
   ul{
     list-style: none;
     padding: 0;
+    margin:0;
   }
 `;
 

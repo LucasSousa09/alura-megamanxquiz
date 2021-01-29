@@ -7,7 +7,7 @@ const InputBase = styled.input`
     background-color: transparent;
     color: ${({ theme }) => theme.colors.contrastText};
 
-    border: 1px solid ${({ theme }) => theme.colors.gray};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
     border-radius: ${({ theme }) => theme.borderRadius};
 
     font-family: inherit;

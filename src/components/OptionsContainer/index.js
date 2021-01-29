@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const OptionsContainer = styled.div`
     width: 100%;
@@ -6,20 +6,20 @@ const OptionsContainer = styled.div`
     margin-top: .5rem;
     margin-bottom: .5rem;
 
-    border: 1px solid ${({theme}) => theme.colors.gray};
-    border-radius: ${({theme}) => theme.borderRadius};
-    background-color: ${({theme}) => theme.colors.secondaryBg };
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border-radius: ${({ theme }) => theme.borderRadius};
+    background-color: ${({ theme }) => theme.colors.mainBg};
 
     cursor: pointer;
     
     a {
         text-decoration:none;
-        color: ${({theme}) => theme.colors.contrastText}
+        color: ${({ theme }) => theme.colors.contrastText}
     }
 
     &:hover{
-        background-color: ${({theme}) => theme.colors.terciaryBg}
+        background-color: ${({ theme }) => theme.colors.primary}
     }
-`
+`;
 
 export default OptionsContainer;

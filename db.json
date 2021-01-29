@@ -1,4 +1,5 @@
 {
+    "bg": "https://alura-megamanxquiz.lucassousa09.vercel.app/megaman.jpg",
     "title": "Megaman X",
     "description": "Teste seus conhecimentos sobre Megaman X. E descubra se você é um fã de verdade!",
     "questions": [
@@ -66,20 +67,23 @@
 
     ],
     "external": [
-      ""
+      "https://quiz-react.brenoha.vercel.app/",
+      "https://alura-quiz-ferro-e-fogo.vercel.app/",
+      "https://math-quiz.noriller.vercel.app/"
     ],
     "theme": {
       "colors": {
         "primary": "#0d47a1",
         "secondary": "#166a9b",
-        "terciary": "#2490cf",
-        "gray": "#333",
         "mainBg": "#171B35",
-        "secondaryBg": "#2e2822",
-        "terciaryBg": "#3a332b",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",
-        "success": "#4CAF50"
+        "success": "#4CAF50",
+
+        "terciary": "#2490cf",
+        "gray": "#333",
+        "secondaryBg": "#2e2822",
+        "terciaryBg": "#3a332b"
       },
       "borderRadius": "4px"
     }

@@ -57,18 +57,27 @@ export default function Home() {
             <p>
               Não esqueça de visitar esse Quizes incríveis que a galera da Imersão React criou!!!
             </p>
-            <OptionsContainer>
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href="#">paulosouza/jsmortalquiz</a>
-            </OptionsContainer>
-            <OptionsContainer>
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href="#">juliana/cssmatadorquiz</a>
-            </OptionsContainer>
-            <OptionsContainer>
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href="#">soutinho/thelegendofzeldaquiz</a>
-            </OptionsContainer>
+            <ul>
+              {db.external.map((linkExterno) => {
+                const [projectName, gitHubUser] = linkExterno.replace(/\//g, '')
+                  .replace('https:', '')
+                  .replace('.vercel.app', '')
+                  .split('.');
+
+                return (
+                  <li key={linkExterno}>
+                    <OptionsContainer>
+                      {' '}
+                      <a href={`/quiz/${projectName}___${gitHubUser}`}>
+                        {projectName}
+                        /
+                        {gitHubUser}
+                      </a>
+                    </OptionsContainer>
+                  </li>
+                );
+              })}
+            </ul>
           </Widget.Content>
         </Widget>
         <Footer />

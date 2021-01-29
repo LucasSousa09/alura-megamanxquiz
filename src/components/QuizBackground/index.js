@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const QuizBackground = styled.div`
     width: 100%;
@@ -6,8 +6,8 @@ const QuizBackground = styled.div`
 
     background-size: cover;
     background-position: center;
-    background-image: url(${({backgroundImage}) => backgroundImage });
-    background-color: ${({theme}) => theme.colors.mainBg};
+    background-image: url(${({ backgroundImage }) => backgroundImage});
+    background-color: ${({ theme }) => theme.colors.mainBg};
 
     @media screen and (max-width: 500px){
         display: flex;
@@ -29,7 +29,7 @@ const QuizBackground = styled.div`
             
             background-size: cover;
             background-position: center;
-            background-image: linear-gradient(transparent, ${({theme}) => theme.colors.mainBg}), url(${({backgroundImage}) => backgroundImage});
+            background-image: linear-gradient(transparent, ${({ theme }) => theme.colors.mainBg}), url(${({ backgroundImage }) => backgroundImage});
 
             z-index: 1;
         }
@@ -38,6 +38,6 @@ const QuizBackground = styled.div`
             z-index: 10;
         }
     }
-`
+`;
 
 export default QuizBackground;
