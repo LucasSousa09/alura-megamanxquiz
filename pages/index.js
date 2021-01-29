@@ -18,7 +18,7 @@ export default function Home() {
   const [name, setName] = React.useState('');
 
   return (
-    <QuizBackground backgroundImage="/megaman.jpg">
+    <QuizBackground backgroundImage="/megaman.jpg" backgroundImage2="/megaman_800plus.jpg">
       <QuizContainer>
         <Logo />
         <Widget

@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-plusplus */
 import React from 'react';
 import QuizBackground from '../../src/components/QuizBackground';
 import QuizContainer from '../../src/components/QuizContainer';
@@ -127,6 +129,15 @@ export default function Quiz() {
             { `Pergunta ${qN + 1} de ${db.questions.length}` }
           </h2>
         </Widget.Header>
+        <img
+          alt="Descrição"
+          style={{
+            width: '100%',
+            height: '150px',
+            objectFit: 'cover',
+          }}
+          src={db.questions[qN].image}
+        />
         {elementsShow()}
         <Widget.Animation>
           <div className="js-animation" />
@@ -151,6 +162,7 @@ export default function Quiz() {
           <h2>Respostas Corretas:</h2>
           <ul>
             {myanswers.map((answers, idx) => (
+              // eslint-disable-next-line react/no-array-index-key
               <li key={`${idx}`}>
                 {answers === true
                   ? (
@@ -178,7 +190,7 @@ export default function Quiz() {
   }
 
   return (
-    <QuizBackground backgroundImage="/megaman.jpg">
+    <QuizBackground backgroundImage="/megaman.jpg" backgroundImage2="/megaman_800plus.jpg">
       <QuizContainer>
         <Logo />
         <Widget>
