@@ -18,7 +18,8 @@ const screenStates = {
 
 const myanswers = [];
 
-export default function Quiz() {
+export default function Quiz({ playerName }) {
+  const player = playerName;
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const itemList = [];
   const [qLeft, setQLeft] = React.useState(true);
@@ -99,14 +100,14 @@ export default function Quiz() {
         setTimeout(() => {
           goToTheNextQuestion();
           animation.classList.remove('animation');
-        }, 2000);
+        }, 3000);
       } else {
         const animation = document.querySelector('.js-animation');
         animation.classList.add('animation');
         setTimeout(() => {
           setQLeft(false);
           elementsShow();
-        }, 2000);
+        }, 3000);
       }
     }
   }
@@ -157,9 +158,16 @@ export default function Quiz() {
           <h1>Você completou o Quiz!</h1>
         </Widget.Header>
         <Widget.Content>
-          <h2>
-            {`Parabéns você acertou ${nCA} de ${db.questions.length}!`}
-          </h2>
+          {nCA > 2 ? (
+            <h2>
+              {`Parabéns ${player.name} você acertou ${nCA} de ${db.questions.length}!`}
+            </h2>
+          ) : (
+            <h2>
+              {`Bom... ${player.name}, você acertou ${nCA} de ${db.questions.length} está precisando dar uma melhorada!`}
+            </h2>
+          )}
+
           <h2>
             {`Você fez ${nCA * 20} pontos!`}
           </h2>
@@ -205,4 +213,11 @@ export default function Quiz() {
       </QuizContainer>
     </QuizBackground>
   );
+}
+
+export async function getServerSideProps(context) {
+  const playerName = context.query;
+  return {
+    props: { playerName }, // will be passed to the page component as props
+  };
 }

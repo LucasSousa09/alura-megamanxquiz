@@ -50,12 +50,15 @@ export default function Home() {
                 }}
                 placeholder="Digite seu nome nobre Guerreiro(a)"
                 value={name}
+                autoComplete="off"
               />
               <Button
                 type="submit"
                 disabled={name.length === 0}
               >
                 Game Start!
+                <br />
+                {name.length > 0 ? `as ${name}` : '' }
               </Button>
               {/* <button type="submit" disabled={name.length === 0}>Game Start!</button> */}
             </form>

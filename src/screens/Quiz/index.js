@@ -154,6 +154,7 @@ export default function Quiz({ externalQuestions, externalTheme, externalBg }) {
           <h2>Respostas Corretas:</h2>
           <ul>
             {myanswers.map((answers, idx) => (
+              // eslint-disable-next-line react/no-array-index-key
               <li key={`${idx}`}>
                 {answers === true
                   ? (

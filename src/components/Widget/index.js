@@ -82,7 +82,7 @@ Widget.Animation = styled.div`
 
     background-color: ${({ theme }) => theme.colors.secondary};
 
-    animation: load 2s linear;
+    animation: load 3s linear;
   }
 
   @keyframes load{
