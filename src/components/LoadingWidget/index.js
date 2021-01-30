@@ -15,9 +15,18 @@ export default function LoadingWidget() {
       <Widget.Header>
         Carregando...
       </Widget.Header>
-      <Widget.Content>
-        [Carregando...]
-      </Widget.Content>
+
+      <img
+        alt="Descrição"
+        style={{
+          width: '348px',
+          height: '150px',
+          objectPosition: 'center',
+        }}
+        src="https://media3.giphy.com/media/SSFCk3iiylUX3nndBf/giphy.gif"
+        className="js-image"
+      />
+
     </Loading>
   );
 }

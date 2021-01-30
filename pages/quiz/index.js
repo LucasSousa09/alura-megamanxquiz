@@ -29,7 +29,7 @@ export default function Quiz() {
   React.useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1000);
+    }, 2000);
   }, []);
 
   function calculatePoints() {
@@ -70,6 +70,7 @@ export default function Quiz() {
 
   function nextQuestion() {
     const alternatives = document.querySelectorAll('.alternatives');
+    const rightGif = document.querySelector('.js-image');
 
     function goToTheNextQuestion() {
       setQN(qN + 1);
@@ -82,10 +83,12 @@ export default function Quiz() {
     if (qN < db.questions.length) {
       const cA = db.questions[qN].answer;
       if (cA === +myanswer) {
-        alternatives[myanswer].style.backgroundColor = '#4CAF50';
+        alternatives[myanswer].style.backgroundColor = db.theme.colors.success;
+        rightGif.src = 'https://media3.giphy.com/media/YRzMh5cKgmOyuTrtIj/giphy.gif';
         myanswers.push(true);
       } else {
-        alternatives[myanswer].style.backgroundColor = '#FF5722';
+        alternatives[myanswer].style.backgroundColor = db.theme.colors.wrong;
+        rightGif.src = 'https://i.makeagif.com/media/7-19-2015/hJGQai.gif';
         myanswers.push(false);
       }
 
@@ -134,9 +137,10 @@ export default function Quiz() {
           style={{
             width: '100%',
             height: '150px',
-            objectFit: 'cover',
+            objectPosition: 'center',
           }}
           src={db.questions[qN].image}
+          className="js-image"
         />
         {elementsShow()}
         <Widget.Animation>
