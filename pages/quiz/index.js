@@ -18,6 +18,7 @@ const screenStates = {
 
 const myanswers = [];
 
+// eslint-disable-next-line react/prop-types
 export default function Quiz({ playerName }) {
   const player = playerName;
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
